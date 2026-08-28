@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.bistroten.com" }],
+      "destination": "https://bistroten.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.bistroten.com" }],
+      "destination": "https://bistroten.com/:path*",
+      "permanent": true
+    }
+  ]
+}
