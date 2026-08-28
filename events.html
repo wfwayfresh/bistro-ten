@@ -113,7 +113,9 @@
       <h2 class="h2">Tell us about your evening.</h2>
       <p class="lede" style="margin-top:1.4rem">The more you can tell us, the faster we can answer. We reply to every enquiry personally.</p>
     </div>
-    <form class="form rv" data-demo>
+    <form class="form rv" data-enquiry method="post" action="/api/enquiry">
+      <input type="hidden" name="form" value="events">
+      <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
       <div class="fld"><label for="e-name">Your name</label><input id="e-name" name="name" type="text" autocomplete="name" required></div>
       <div class="fld"><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required></div>
       <div class="fld"><label for="e-phone">Phone</label><input id="e-phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -129,7 +131,7 @@
       <div class="fld full"><label for="e-notes">Anything else we should know</label><textarea id="e-notes" name="notes" placeholder="Patio or dining room, seated or standing, dietary needs, a wine you love&hellip;"></textarea></div>
       <div class="full btn-row" style="justify-content:space-between">
         <button class="btn btn-gold" type="submit">Send enquiry</button>
-        <span class="demo-note">Demo site &mdash; this form is not connected yet.</span>
+        <span class="form-status" role="status" aria-live="polite"></span>
       </div>
     </form>
     <div class="info rv" style="margin-top:3.6rem">

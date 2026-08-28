@@ -1,0 +1,8 @@
+{
+  "name": "bistro-ten",
+  "private": true,
+  "description": "Static site for Bistro Ten. The only server-side code is api/enquiry.js, which emails form submissions.",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
